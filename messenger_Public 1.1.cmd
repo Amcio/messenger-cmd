@@ -7,6 +7,7 @@ Cls
 :: SRVC_LOG:MAINTN_C/O_AFTNROBTCS.
 color 08
 title MESSENGER 1.1.1
+:Load
 @echo off
 echo M
 ping localhost -n .15 >nul
@@ -116,6 +117,7 @@ cls
 echo Initializing...
 ping localhost -n 5 >nul
 cls
+:LoadBar
 @echo off
 color 08
 echo.
@@ -270,7 +272,7 @@ echo    Loading.           Please Wait
 echo ---------------------------------------
 echo [][][][][][][][][]              =  56 ]
 echo ---------------------------------------
-ping localhost -n .15 >nul
+ping localhost -n 4 >nul
 cls
 echo.
 echo.
@@ -284,7 +286,7 @@ echo    Loading..         Please Wait
 echo ---------------------------------------
 echo [][][][][][][][][][]            =  63 ]
 echo ---------------------------------------
-ping localhost -n .15 >nul
+ping localhost -n 3 >nul
 cls
 echo.
 echo.
@@ -298,7 +300,7 @@ echo    Loading...        Please Wait
 echo ---------------------------------------
 echo [][][][][][][][][][][]          =  69 ]
 echo ---------------------------------------
-ping localhost -n .15 >nul
+ping localhost -n 2 >nul
 cls
 echo.
 echo.
@@ -312,7 +314,7 @@ echo    Loading.          Please Wait
 echo ---------------------------------------
 echo [][][][][][][][][][][][]        =  75 ]
 echo ---------------------------------------
-ping localhost -n .15 >nul
+ping localhost -n 4 >nul
 cls
 echo.
 echo.
@@ -326,7 +328,7 @@ echo    Loading..         Please Wait
 echo ---------------------------------------
 echo [][][][][][][][][][][][][]      =  79 ]
 echo ---------------------------------------
-ping localhost -n .15 >nul
+ping localhost -n 3 >nul
 cls
 echo.
 echo.
@@ -340,7 +342,7 @@ echo    Loading...        Please Wait
 echo ---------------------------------------
 echo [][][][][][][][][][][][][][]    =  86 ]
 echo ---------------------------------------
-ping localhost -n .15 >nul
+ping localhost -n 2 >nul
 cls
 echo.
 echo.
@@ -354,7 +356,7 @@ echo    Loading.          Please Wait
 echo ---------------------------------------
 echo [][][][][][][][][][][][][][][]  =  90 ]
 echo ---------------------------------------
-ping localhost -n .15 >nul
+ping localhost -n 2 >nul
 cls
 echo.
 echo.
@@ -385,6 +387,7 @@ echo ---------------------------------------
 echo [][][][][][][][][][][][][][][][]= 100 ]
 echo ---------------------------------------
 cls
+:A
 echo ==================================MESSENGER=====================================
 echo Program created by: Amcio
 echo Information: Type IP/Computer Name to connect to another computer.
@@ -399,7 +402,7 @@ echo If you want to send message to someone else type: restart in the message
 echo --------------------
 set /p n=Computer Name/IP:
 cls
-:A
+:Messege
 echo ==================================MESSENGER=====================================
 echo Program created by: Amcio
 echo Information: Type IP/Computer Name to connect to another computer.
@@ -407,9 +410,9 @@ echo If you want to send message to someone else type: restart in the message
 echo Your Messege will be displayed for 20 seconds.
 echo --------------------
 set /p m=Message:
-if %m% EQU restart goto :Start ELSE goto :B
-:B
+if %m% EQU restart goto :Start ELSE goto :Send
+:Send
 msg /server:%n% * /V /W /TIME:20 "%m%"
 Pause
 cls
-Goto A
+Goto Messege
