@@ -6,7 +6,7 @@ Cls
 :: Oh and look for my updates on GitHub. https://github.com/Amcio/messenger-cmd
 :: SRVC_LOG:MAINTN_C/O_AFTNROBTCS.
 color 08
-title Command Prompt Messenger 1.2 Patch 1
+title Command Prompt Messenger 1.2 Patch 1 [RELAESE]
 :Load
 @echo off
 echo M
