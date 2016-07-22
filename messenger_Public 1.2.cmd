@@ -322,7 +322,6 @@ echo.
 echo.
 echo.
 echo.
-:: Client_Dir002:PrivateBDayBooking[5OL]/Chldrn_ENT/BdayProps/Novelties
 echo.
 echo.
 echo    Loading..         Please Wait
@@ -396,7 +395,6 @@ echo If you want to send message to someone else type: restart in the message
 echo -----------------------------------
 :Start
 cls
-:: ANM05OOS
 echo ==================================MESSENGER=====================================
 echo Program created by: Amcio
 echo Information: Type IP/Computer Name to connect to another computer.
