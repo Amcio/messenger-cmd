@@ -1,12 +1,13 @@
+:Prepare
 @echo off
 Cls
 :: First Do what you want with it. This is Licensed under  GNU GENERAL PUBLIC LICENSE Version 3
 :: BUT if you make an update i want to check it out so if you do sent it to me amcio122@gmail.com
 :: I hope you will find this cool to troll or scare your friends while they play CS:GO
+:: Of course if it works.
 :: Oh and look for my updates on GitHub. https://github.com/Amcio/messenger-cmd
-:: SRVC_LOG:MAINTN_C/O_AFTNROBTCS.
 color 08
-title Command Prompt Messenger 1.2 Patch 1 [RELAESE]
+title Command Prompt Messenger 1.3.1 [RELEASE]
 :Load
 @echo off
 echo M
@@ -146,7 +147,7 @@ echo    Loading.          Please Wait
 echo ---------------------------------------
 echo []                              =   5 ]
 echo ---------------------------------------
-ping localhost -n 3 >nul
+ping localhost -n 1 >nul
 cls
 echo.
 echo.
@@ -188,7 +189,7 @@ echo    Loading.          Please Wait
 echo ---------------------------------------
 echo [][][][]                        =  30 ]
 echo ---------------------------------------
-ping localhost -n 4 >nul
+ping localhost -n 2 >nul
 cls
 echo.
 echo.
@@ -216,7 +217,7 @@ echo    Loading...        Please Wait
 echo ---------------------------------------
 echo [][][][][]                      =  42 ]
 echo ---------------------------------------
-ping localhost -n 3 >nul
+ping localhost -n 1 >nul
 cls
 echo.
 echo.
@@ -244,7 +245,7 @@ echo    Loading..         Please Wait
 echo ---------------------------------------
 echo [][][][][][][]                  =  48 ]
 echo ---------------------------------------
-ping localhost -n 3 >nul
+ping localhost -n 1 >nul
 cls
 echo.
 echo.
@@ -272,7 +273,7 @@ echo    Loading.           Please Wait
 echo ---------------------------------------
 echo [][][][][][][][][]              =  56 ]
 echo ---------------------------------------
-ping localhost -n 4 >nul
+ping localhost -n 2 >nul
 cls
 echo.
 echo.
@@ -286,7 +287,7 @@ echo    Loading..         Please Wait
 echo ---------------------------------------
 echo [][][][][][][][][][]            =  63 ]
 echo ---------------------------------------
-ping localhost -n 3 >nul
+ping localhost -n 1 >nul
 cls
 echo.
 echo.
@@ -314,7 +315,7 @@ echo    Loading.          Please Wait
 echo ---------------------------------------
 echo [][][][][][][][][][][][]        =  75 ]
 echo ---------------------------------------
-ping localhost -n 4 >nul
+ping localhost -n 2 >nul
 cls
 echo.
 echo.
@@ -328,7 +329,7 @@ echo    Loading..         Please Wait
 echo ---------------------------------------
 echo [][][][][][][][][][][][][]      =  79 ]
 echo ---------------------------------------
-ping localhost -n 3 >nul
+ping localhost -n 1 >nul
 cls
 echo.
 echo.
@@ -342,7 +343,7 @@ echo    Loading...        Please Wait
 echo ---------------------------------------
 echo [][][][][][][][][][][][][][]    =  86 ]
 echo ---------------------------------------
-ping localhost -n 2 >nul
+ping localhost -n 1 >nul
 cls
 echo.
 echo.
@@ -371,7 +372,7 @@ echo    Loading..         Please Wait
 echo ---------------------------------------
 echo [][][][][][][][][][][][][][][]  =  96 ]
 echo ---------------------------------------
-ping localhost -n 4 >nul
+ping localhost -n 3 >nul
 cls
 color 08
 echo.
@@ -386,30 +387,33 @@ echo    Loading...        .Complete.
 echo ---------------------------------------
 echo [][][][][][][][][][][][][][][][]= 100 ]
 echo ---------------------------------------
+ping localhost -n 2 >nul
 cls
-:A
-echo ==================================MESSENGER=====================================
-echo Program created by: Amcio
-echo Information: Type IP/Computer Name to connect to another computer.
-echo If you want to send message to someone else type: restart in the message
+:Test
+:: Program Can Hang Here...
+echo ==================================MESSENGER====================================
+echo # Program created by: Amcio												   #
+echo # Information: Type IP/Computer Name to connect to another computer.		   #
+echo # If you want to send message to someone else type: restart in the message	   #
 echo -----------------------------------
+cls
 :Start
 cls
-echo ==================================MESSENGER=====================================
-echo Program created by: Amcio
-echo Information: Type IP/Computer Name to connect to another computer.
-echo If you want to send message to someone else type: restart in the message
-echo --------------------
+echo ==================================MESSENGER====================================
+echo # Program created by: Amcio				                      #
+echo # Information: Type IP/Computer Name to connect to another computer.	      #
+echo # If you want to send message to someone else type: restart in the message    #
+echo # --------------------							      #
 set /p n=Computer Name/IP:
 cls
 :Messege
-echo ==================================MESSENGER=====================================
-echo Program created by: Amcio
-echo Information: Type IP/Computer Name to connect to another computer.
-:: Client_Dir003:CRMN_Inst/Project
-echo If you want to send message to someone else type: restart in the message
-echo Your Messege will be displayed for 20 seconds.
-echo --------------------
+echo ==================================MESSENGER====================================
+echo # Program created by: Amcio                                                   #
+echo # Information: Type IP/Computer Name to connect to another computer.          #
+:: The Rogue 									  
+echo # If you want to send message to someone else type: restart in the message    #
+echo # Your Messege will be displayed for 20 seconds.                              #
+echo # --------------------                                                        #
 set /p m=Message:
 if /I "%m%" EQU "restart" (
 	Goto :Start
