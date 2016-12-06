@@ -6,6 +6,7 @@ Cls
 :: I hope you will find this cool to troll or scare your friends while they play CS:GO
 :: Of course if it works.
 :: Oh and look for my updates on GitHub. https://github.com/Amcio/messenger-cmd
+:: Tested: Windows 7 Ultimate Windows 7 Pro 
 color 08
 title Command Prompt Messenger 1.3.1 [RELEASE]
 :Load
