@@ -390,6 +390,7 @@ echo ---------------------------------------
 ping localhost -n 2 >nul
 cls
 :Test
+:: Program Can Hang Here...
 echo ==================================MESSENGER====================================
 echo # Program created by: Amcio												   #
 echo # Information: Type IP/Computer Name to connect to another computer.		   #
@@ -399,17 +400,17 @@ cls
 :Start
 cls
 echo ==================================MESSENGER====================================
-echo # Program created by: Amcio												  #
-echo # Information: Type IP/Computer Name to connect to another computer.		  #
-echo # If you want to send message to someone else type: restart in the message	  #
-echo # --------------------														  #
+echo # Program created by: Amcio				                      #
+echo # Information: Type IP/Computer Name to connect to another computer.	      #
+echo # If you want to send message to someone else type: restart in the message    #
+echo # --------------------							      #
 set /p n=Computer Name/IP:
 cls
 :Messege
 echo ==================================MESSENGER====================================
 echo # Program created by: Amcio                                                   #
 echo # Information: Type IP/Computer Name to connect to another computer.          #
-:: TheRogue 									  
+:: The Rogue 									  
 echo # If you want to send message to someone else type: restart in the message    #
 echo # Your Messege will be displayed for 20 seconds.                              #
 echo # --------------------                                                        #
