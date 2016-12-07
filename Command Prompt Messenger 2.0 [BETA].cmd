@@ -7,7 +7,7 @@ Cls
 :: Of course if it works.
 :: Oh and look for my updates on GitHub. https://github.com/Amcio/messenger-cmd
 color 08
-title Command Prompt Messenger 1.3 [BETA]
+title Command Prompt Messenger 2.0 [BETA]
 :Load
 @echo off
 echo M
@@ -389,36 +389,66 @@ echo [][][][][][][][][][][][][][][][]= 100 ]
 echo ---------------------------------------
 ping localhost -n 2 >nul
 cls
-:Test
-:: Program Can Hang Here...
+:Interface
+:: Choose Interface
 echo ==================================MESSENGER====================================
-echo # Program created by: Amcio												   #
-echo # Information: Type IP/Computer Name to connect to another computer.		   #
-echo # If you want to send message to someone else type: restart in the message	   #
-echo -----------------------------------
+echo # Program created by: Amcio	                                              #
+echo # Choose The Interface! You Choose Legacy if you use Windows BEFORE Vista and #
+echo # Future with Windows Vista and newer. Sometimes the legacy interface is not  #
+echo # necessary. If one interface does not work try the other.                    #
+echo # Choose: Legacy Or Future                                                    #
+echo ===================================AMCIO=======================================
+set /p i=Interface:
 cls
 :Start
 cls
 echo ==================================MESSENGER====================================
 echo # Program created by: Amcio				                      #
 echo # Information: Type IP/Computer Name to connect to another computer.	      #
-echo # If you want to send message to someone else type: restart in the message    #
-echo # --------------------							      #
+echo # To use another Interface restart the Program (Ctrl + C)                     #
+echo # If you use Legacy Interface (Unfinished)    #
+echo ===================================AMCIO=======================================
 set /p n=Computer Name/IP:
+if /I "%i%" EQU "Legacy" (
+	Goto :MessegeLegacy
+)
 cls
-:Messege
+:MessegeFuture
+cls
 echo ==================================MESSENGER====================================
 echo # Program created by: Amcio                                                   #
-echo # Information: Type IP/Computer Name to connect to another computer.          #
+echo # Information: Future Interface Active                                        #
 :: The Rogue 									  
 echo # If you want to send message to someone else type: restart in the message    #
 echo # Your Messege will be displayed for 20 seconds.                              #
-echo # --------------------                                                        #
+echo ===================================FUTURE======================================                                                    #
 set /p m=Message:
+Goto :SendFuture
+:MessegeLegacy
+cls
+echo ==================================MESSENGER====================================
+echo # Program created by: Amcio                                                   #
+echo # Information: Legacy Interface Active                                        #				  
+echo # If you want to send message to someone else type: restart in the message    #
+echo # Your Messege will be displayed for 20 seconds.                              #
+echo ===================================LEGACY======================================
+set /p m=Message:
+if /I "%i%" EQU "Legacy" (
+	Goto :SendLegacy
+)
+:SendFuture
 if /I "%m%" EQU "restart" (
 	Goto :Start
 )
 msg /server:%n% * /V /W /TIME:20 "%m%"
 Pause
+Goto :MessegeFuture
 cls
-Goto Messege
+:SendLegacy
+if /I "%m%" EQU "restart" (
+	Goto :Start
+)
+net send "%n%" %m%
+Pause
+Goto :MessegeLegacy
+cls
